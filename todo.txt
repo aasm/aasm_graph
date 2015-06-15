@@ -1,0 +1,4 @@
+- cli or rake tasks or both
+- the include/require options
+- do not use ruby-graphviz gem, just call via command line (add error messages if not installed)
+- output .dot notation to put into graphviz d3
