@@ -3,7 +3,8 @@ module AASM
     class CLI
 
       def initialize(options)
-        @class_names = options[:class_names]
+        @class_names = Array(options[:class_names])
+        @output_path = options[:output_path]
       end
 
       def run
@@ -21,11 +22,15 @@ module AASM
             end
           end
 
-          `echo  "#{dot_notation(edges)}" | dot -Tjpg -o #{name.downcase}.jpg` unless edges.empty?
+          `echo  "#{dot_notation(edges)}" | dot -Tjpg -o #{file_path(name)}` unless edges.empty?
         end
       end
 
       private
+
+      def file_path(name)
+        File.join(@output_path, "#{name.downcase}.jpg")
+      end
 
       def dot_notation(edges)
         <<-DOT
