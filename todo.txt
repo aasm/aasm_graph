@@ -1,4 +1,13 @@
-- cli or rake tasks or both
-- the include/require options
+- add tests
 - do not use ruby-graphviz gem, just call via command line (add error messages if not installed)
 - output .dot notation to put into graphviz d3
+- add more output like conditions or callbacks
+- ascii art?
+- double circle for final nodes?
+- more output formats
+- TD vs LR
+- better/helpful error messages
+- how to namespace objects (copy from active_support)
+- support multiple versions aasm
+- travis
+- fix require_relative
