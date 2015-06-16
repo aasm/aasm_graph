@@ -20,13 +20,15 @@ module AASM
               edges << "#{transition.from} -> #{transition.to} [ label = \"#{event.name}\" ];\n"
             end
           end
-          puts dot_notation(edges)
+
           `echo  "#{dot_notation(edges)}" | dot -Tjpg -o #{name.downcase}.jpg` unless edges.empty?
         end
       end
 
+      private
+
       def dot_notation(edges)
-        string = <<-DOT
+        <<-DOT
 digraph cronjob {
   rankdir=LR; /* This should be configurable */
   node [shape = circle];
