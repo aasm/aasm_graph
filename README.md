@@ -20,7 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can use it via the command line interface:
+```
+./bin/aasm_graph -Iexample -rjob Job
+```
+Or you can use it with Rake. In your `Rakefile`, load the `aasm_graph` task file:
+```
+load "aasm/tasks/aasm_graph.rake"
+```
+And then you can run the rake task:
+```
+rake aasm_graph INCLUDE=./example REQUIRE=job CLASS=Job
+```
 
 ## Contributing
 
