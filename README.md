@@ -21,8 +21,9 @@ Or install it yourself as:
 ## Usage
 
 You can use it via the command line interface:
-```
-./bin/aasm_graph -Iexample -rjob Job
+```bash
+bundle install
+bin/aasm_graph -Iexample -o /tmp -rjob Job
 ```
 Or you can use it with Rake. In your `Rakefile`, load the `aasm_graph` task file:
 ```

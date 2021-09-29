@@ -16,6 +16,10 @@ optparse = OptionParser.new do |opts|
     end
   end
 
+  opts.on("-o", "--output_path path", "Specify output path") do |path|
+    options[:output_path] = path
+  end
+
   opts.on('-R', '--require FILE', 'Require files') do |path|
     require path
   end
